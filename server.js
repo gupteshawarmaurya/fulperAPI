@@ -25,6 +25,11 @@ app.use(cors({ origin: ['*'], credentials: true }));
 
 app.use('/', cors(), rapi);
 
+app.get('/', (req, res) => {
+  res.send({message:"API IS RUNNING NOW."});
+});
+
+
 app.post('/login', (req, res) => {
   if (req.body.username && req.body.password) {
     userDetailsSchema.findOne({ username: req.body.username },
