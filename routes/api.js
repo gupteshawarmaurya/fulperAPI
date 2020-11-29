@@ -2,8 +2,9 @@ var express = require('express');
 var router = express.Router();
 var appfunction = require('./app');
 
-router.get('/getapi/category', appfunction.veryfyToken, appfunction.getCategorty);
-router.post('/postapi/category', appfunction.veryfyToken, appfunction.postCategorty);
+router.get('/getapi/category', appfunction.getCategorty);
+
+router.post('/postapi/category', appfunction.postCategorty);
 
 
 
