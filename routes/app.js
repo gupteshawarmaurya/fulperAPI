@@ -34,6 +34,7 @@ exports.getCategorty = function (req, res) {
 };
 
 exports.postCategorty = function (req, res) {
+  //  console.log(req.body)
     categoryListSchem.create(req.body,
         function (err, suc) {
             if (err) {
